@@ -39,8 +39,8 @@ log:
   char user1[]="admin",pass1[]="pass",name[]="thee",surename[]="sahawat",direction1[]="access_server",direction4[]="yes",direction8[]="access_helper",direction9[]="help",direction10[]="access_calculator",direction11[]="exit",direction_ttie[20];
   char cal1[]="plus",cal2[]="minus",cal3[]="multiply",cal4[]="divide",direction13[]="cam",direction14[]="exit",direction15[]="out",direction16[]="logout",direction17[]="access_pjmm",direction18[]="access_dmm",direction_yes[]="yes",direction_no[]="no",direction19[]="info",direction20[]="welcome",direction21[]="access_xcs";
   char direction22[]="tls",direction23[]="j",direction24[]="ttie",direction_a[]="a",direction_d[]="d",direction_guide[]="guide",forgot[]="forgot",music_band1[]="ajr",pb1[]="iphonefive",user_help[]="help",direction_ver[]="ver",direction_nope[]="nope",direction_note[]="note",direction_cmd[]="cmd",direction_cls[]="cls";
-  char cmd[]="cmd",direction_time[]="time",direction_powershell[]="ps",direction_git[]="git",direction_smp[]="access_smp",smp_list[]="list";
-  char cal[20],ps[20],direction_dmm[20],pb[20];
+  char cmd[]="cmd",direction_time[]="time",direction_powershell[]="ps",direction_git[]="git",direction_smp[]="access_smp",smp_list[]="list",google[]="google",youtube[]="youtube",github[]="github",fslhuper[]="access_fslhuper",hu_run[]="hu_run";
+  char cal[20],ps[20],direction_dmm[20],pb[20],fslhuper_main[100];
   //for SMP
   char ch3[]="ch3";
   //for SMP
@@ -137,6 +137,30 @@ do{
 		  goto SHS;
 		 }
        }
+      	    else if (strcmp(direction2,google)==0)
+		{
+		system("cls");
+		printf("open google\n");
+        system("START https://www.google.com/");
+		system("cls");
+		goto start;
+		}
+	    else if (strcmp(direction2,youtube)==0)
+		{
+		system("cls");
+		printf("open youtube\n");
+        system("START https://www.youtube.com/");
+		system("cls");
+		goto start;
+		}
+		else if (strcmp(direction2,github)==0)
+		{
+		system("cls");
+		printf("open github\n");
+        system("START https://www.github.com/");
+		system("cls");
+		goto start;
+		}
        else if (strcmp(direction2,direction17)==0)
        {
        	//P.J.M.M
@@ -1066,6 +1090,89 @@ do{
 		system("pause");
 		system("cls");
 		goto xcs;
+		}
+		}
+		else if (strcmp(direction2,fslhuper)==0)
+		{
+		system("cls");
+		printf("hello and welcome to\n");
+		printf("F    S      L        H    U    P        E       R\n");
+		printf("FNAF SISTER LOCATION HAND UNIT PROTOCOL ELEMENT ROUTER\n");
+		printf("------------------------------------------------------\n");
+		printf("F:/HU>");
+		scanf("%s",fslhuper_main);
+		if (strcmp(fslhuper_main,hu_run)==0)
+		{
+		printf("================\n");
+        printf("system starting");
+		sleep(5);
+	    system("cls");
+	    sleep(4);
+	    printf("HAND UNIN\n");
+	    printf("H    U\n");
+	    printf("----------------\n");
+	    sleep(3);
+	    printf("SYSTEM STATUS:ON\n");
+	    printf("ELEVATOR STATUS:ON-STANDBY\n");
+	    printf("--------------------------\n\n");
+	    sleep(8);
+	    printf("=================================\n");
+	    printf("MOTION TRICKER:ELEVATOR-1ST FLOOR\n");
+	    printf("=================================\n");
+	    sleep(7);
+	    printf("ELEVATOR STATUS:DOWN\n");
+	    printf("=================================\n");
+	    sleep(5);
+	    system("cls");
+	    printf("H    U    E\n");
+	    printf("HAND UNIT ELEVATOR\n");
+	    printf("------------------\n\n");
+	    printf("==================\n");
+	    printf("SYSTEM TERMINAL\n");
+	    printf("---------------\n");
+	    printf("playlog HU_S1\n");
+	    printf("playing...\n");
+	    system("start D:\HandUnit01Welcome.ogg");
+	    sleep(27);
+	    printf("SOUND COMPLETE\n");
+	    printf("------------------------------\n");
+	    printf("playlog HU_S2\n");
+	    printf("playing...\n");
+	    system("start D:\HandUnitEntername.ogg");
+	    sleep(6);
+	    printf("SOUND COMPLETE\n");
+	    printf("------------------------------\n");
+	    sleep(1);
+	    printf("ERROR:KEYPAD UNSTABLE\n");
+	    printf("AUTO CORRECT SYSTEM:ENABLE\n");
+	    printf("FIXING...\n");
+	    sleep(5);
+	    printf("AUTO CORRECT SYSTEM\n");
+	    printf("===================\n");
+	    printf("playlog HU_S3\n");
+	    printf("playing...\n");
+	    system("start D:\HandUnitAutocorrect1.ogg");
+	    sleep(8);
+	    printf("SOUND COMPLETE\n");
+	    printf("===================\n");
+	    printf("AUTO CORRECT SYSTEM SOUND GENERATE\n");
+	    printf("generate...\n");
+	    sleep(2);
+	    printf("playing...\n");
+	    system("start D:\HandUnitEggsBenedict.ogg");
+	    sleep(2);
+	    printf("SOUND COMPLETE\n");
+	    printf("=====================\n");
+	    printf("END OF AUTO CORRECT SYSTEM PROTOCOL\n\n");
+	    sleep(5);
+	    printf("=======================================\n");
+	    printf("ELEVATOR STATUS:B1\n");
+	    printf("playlog ES_S1\n");
+	    printf("playing...\n");
+	    system("start D:\StartNight1.ogg");
+		sleep(14);
+		printf("SOUND COMPLETE\n");
+		printf("=====================\n");
 		}
 		}
 	    else if (strcmp(direction2,direction18)==0)
