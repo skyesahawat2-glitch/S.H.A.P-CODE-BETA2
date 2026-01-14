@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Directory</title>
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --bg: #f8fafc;
+            --text: #1e293b;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            border-color: var(--primary);
+        }
+
+        /* TEXT ICON STYLE */
+        .text-icon {
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
+
+        /* Different Colors for Variety */
+        .color-1 { background: linear-gradient(135deg, #8514cb); }
+        .color-2 { background: linear-gradient(135deg, #0ea5e9); }
+        .color-3 { background: linear-gradient(135deg, #22b759); }
+        .color-4 { background: linear-gradient(135deg, #2b30c0); }
+        .color-5 { background: linear-gradient(135deg, #d946ef,#0e53e9); }
+        .color-6 { background: linear-gradient(135deg, #ce1a1a); }
+        .color-7 { background: linear-gradient(135deg, #04c725); }
+        .color-8 { background: linear-gradient(135deg, #24292e,#575d64); }
+        .card-content {
+            padding: 24px;
+        }
+
+        #thai-time { font-size: 1.5rem; font-weight: 800; font-family: monospace; }
+
+        /* CLOCK STYLING */
+        .clock-container {
+            background: #1e293b;
+            color: #38bdf8;
+            padding: 10px 25px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #thai-time { font-size: 1.5rem; font-weight: 800; font-family: monospace; }
+
+        /* SEARCH BOX STYLING */
+        .search-wrapper {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 50px;
+        }
+
+        .search-form {
+            display: flex;
+            background: white;
+            padding: 8px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-input {
+            flex-grow: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1rem;
+            outline: none;
+            border-radius: 8px;
+        }
+
+        .search-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .search-btn:hover { background: #4338ca; }
+
+        /* CARDS GRID */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .search-btn:hover { background: #4338ca; }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 24px;
+            min-height: 45px;
+        }
+
+        .select-btn {
+            display: block;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .select-btn:hover {
+            background-color: #3730a3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock-container">
+        <div id="thai-time">00:00:00</div>
+    </div>
+
+    <h1>welcome to</h1>
+    <h1>THEE WEB LINK</h1>
+    <p style="margin-bottom: 40px;">Choose a website from the list below</p>
+
+    <div class="container">
+        
+            <div class="search-wrapper">
+        <form action="https://www.google.com/search" method="GET" class="search-form" target="_blank">
+            <input type="text" name="q" class="search-input" placeholder="Search Google or type a URL..." required>
+            <button type="submit" class="search-btn">Search</button>
+        </form>
+    </div>
+
+        <div class="card">
+            <div class="text-icon color-1">forms</div>
+            <div class="card-content">
+                <div class="card-title">GOOGLE FORMS</div>
+                <div class="card-desc"></div>
+                <a href="https://docs.google.com/forms/u/2/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-icon color-3">sheet</div>
+            <div class="card-content">
+                <div class="card-title">GOOGLE SHEETS</div>
+                <div class="card-desc"></div>
+                <a href="https://docs.google.com/spreadsheets/u/2/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-icon color-2">Docs</div>
+            <div class="card-content">
+                <div class="card-title">GOOGLE DOCS</div>
+                <div class="card-desc"></div>
+                <a href="https://docs.google.com/document/u/2/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-icon color-4">GEMINI</div>
+            <div class="card-content">
+                <div class="card-title">GOOGLE GEMINI</div>
+                <div class="card-desc"></div>
+                <a href="https://gemini.google.com/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="text-icon color-6">youtube</div>
+            <div class="card-content">
+                <div class="card-title">YOUTUBE</div>
+                <div class="card-desc"></div>
+                <a href="https://youtube.com/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+
+                <div class="card">
+            <div class="text-icon color-5">canva</div>
+            <div class="card-content">
+                <div class="card-title">CANVA</div>
+                <div class="card-desc"></div>
+                <a href="https://canva.com/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+        
+                <div class="card">
+            <div class="text-icon color-7">thairat</div>
+            <div class="card-content">
+                <div class="card-title">THAIRAT NEWS</div>
+                <div class="card-desc"></div>
+                <a href="https://www.thairath.co.th/news" class="select-btn">Open Website</a>
+            </div>
+        </div>
+
+                    <div class="card">
+            <div class="text-icon color-8">github</div>
+            <div class="card-content">
+                <div class="card-title">GITHUB</div>
+                <div class="card-desc"></div>
+                <a href="https://github.com/" class="select-btn">Open Website</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateThaiClock() {
+            const options = { timeZone: 'Asia/Bangkok', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+            const formatter = new Intl.DateTimeFormat('en-GB', options);
+            document.getElementById('thai-time').textContent = formatter.format(new Date());
+        }
+        setInterval(updateThaiClock, 1000);
+        updateThaiClock();
+    </script>
+
+</body>
+</html>
