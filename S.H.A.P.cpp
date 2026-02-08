@@ -39,11 +39,14 @@ log:
   char user1[]="admin",pass1[]="pass",name[]="thee",surename[]="sahawat",direction1[]="access_server",direction4[]="yes",direction8[]="access_helper",direction9[]="help",direction10[]="access_calculator",direction11[]="exit",direction_ttie[20];
   char cal1[]="plus",cal2[]="minus",cal3[]="multiply",cal4[]="divide",direction13[]="cam",direction14[]="exit",direction15[]="out",direction16[]="logout",direction17[]="access_pjmm",direction18[]="access_dmm",direction_yes[]="yes",direction_no[]="no",direction19[]="info",direction20[]="welcome",direction21[]="access_xcs";
   char direction22[]="tls",direction23[]="j",direction24[]="ttie",direction_a[]="a",direction_d[]="d",direction_guide[]="guide",forgot[]="forgot",music_band1[]="ajr",pb1[]="iphonefive",user_help[]="help",direction_ver[]="ver",direction_nope[]="nope",direction_note[]="note",direction_cmd[]="cmd",direction_cls[]="cls";
-  char cmd[]="cmd",direction_time[]="time",direction_powershell[]="ps",direction_git[]="git",direction_smp[]="access_smp",smp_list[]="list",google[]="google",youtube[]="youtube",github[]="github",fslhuper[]="access_fslhuper",hu_run[]="hu_run",twl[]="twl";
+  char cmd[]="cmd",direction_time[]="time",direction_powershell[]="ps",direction_git[]="git",direction_smp[]="access_smp",smp_list[]="list",google[]="google",fslhuper[]="access_fslhuper",hu_run[]="hu_run",twl[]="twl",smp_stop[]="stop";
   char cal[20],ps[20],direction_dmm[20],pb[20],fslhuper_main[100];
   //for SMP
   char ch3[]="ch3";
   char nottoday[]="nottoday";
+  char smp_bluetooth[]="blue";
+  char loop_asia7[]="loop";
+  char fromthestart[]="fromthestart";
   //for SMP
   int i=0;
   float num1,num2,num3,num4;
@@ -1193,31 +1196,7 @@ do{
 		}
 	    else if (strcmp(direction2,direction18)==0)
        	{
-       	system("cls");
-       	printf("welcome to\n");
-       	printf("D  . M    . M\n"); 
-       	printf("DOOR MANAGE MENT\n");
-       	dmm1:
-       	printf("do you want to open-close door:");
-       	scanf("%s",direction_dmm);
-       	if(strcmp(direction_dmm,direction_yes)==0)
-       	{
-       	system("cls");
-       	printf("door moveing\n");
-		sleep(4);
-		printf("door moved\n");
-		system("pause");
-		system("cls");
-		goto start;	
-		}
-		else if (strcmp(direction_dmm,direction_no)==0)
-		{
-		system("cls");
-		printf("ok\n");
-		system("pause");
-		system("cls");
-		goto start;
-		}
+       	system("dmm.exe");
 	   }
 	   else if (strcmp(direction2,direction_smp)==0)
 	   {
@@ -1237,12 +1216,25 @@ do{
 	   }
 	   else if(strcmp(direction_smpcmd,nottoday)==0)
 	   {
-	   system("cls");
-	   	printf("ERROR:S.M.P CAN'T PLAY THIS FILE\n");
-	   	printf("S.H.A.P:SORRY LOOKS LIKE YOU FOUND SOME ERROR IS NOT ALREADY FIXED\n");
-	   	printf("        PLEASE PLAY THE FILE MANUALLY\n");
-	   	system("pause");
-	    system("START nottoday.mp3");
+	    system("not-today.mp3");
+	    system("cls");
+	    goto smp;
+	   }
+	   else if (strcmp(direction_smpcmd,loop_asia7)==0)
+	   {
+	    system("LOOP-ASIA7.mp3");
+	    system("cls");
+	    goto smp;
+       }
+	   else if (strcmp(direction_smpcmd,smp_stop)==0)
+	   {
+	    system("SMP_STOP.mp3");
+	    system("cls");
+	    goto smp;
+	   }
+	   	else if (strcmp(direction_smpcmd,fromthestart)==0)
+	   {
+	    system("from-the-start.mp3");
 	    system("cls");
 	    goto smp;
 	   }
@@ -1250,12 +1242,23 @@ do{
 	   {
 	   	system("cls");
 		printf("1.ch3\n");
-	   	printf("2.out = exit SMP\n");
-	   	printf("3.exit = exit S.H.A.P\n");
+		printf("2.nottoday\n");
+		printf("3.loop\n");
+		printf("4.fromthestart\n");
+		printf("5.blue = open bluetooth windows\n");
+	   	printf("6.out = exit SMP\n");
+	   	printf("7.exit = exit S.H.A.P\n");
+	   	printf("-------------------------------\n");
 	   	system("pause");
 	   	system("cls");
 	   	goto smp;
 	   }
+	   else if (strcmp(direction_smpcmd,smp_bluetooth)==0)
+	   {
+	    system("bthprops.cpl");
+	    system("cls");
+	    goto smp;
+		} 
 	   else if (strcmp(direction_smpcmd,direction15)==0)
 	   {
 	   system("cls");
@@ -1280,7 +1283,7 @@ do{
 	   {
 	   //ver//
 	   system("cls");
-	   printf("S.H.A.P system version 1.4\n");
+	   printf("S.H.A.P system version 1.5\n");
 	   printf("--------------------------\n");
 	   system("pause");
 	   system("cls");
